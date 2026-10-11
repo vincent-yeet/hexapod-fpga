@@ -1,0 +1,55 @@
+# Local OS and editor files
+.DS_Store
+._*
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Local secrets and environment configuration
+.env
+.env.*
+!.env.example
+
+# Build outputs and local workspaces
+build/
+dist/
+output/
+outputs/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Vivado / Vitis generated state (retain source project descriptions)
+.Xil/
+*.cache/
+*.gen/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+*.jou
+*.log
+*.str
+*.bit
+*.ltx
+*.xsa
+*.dcp
+*.wdb
+*.wcfg
+*.vcd
+*.fst
+*.vvp
+
+# Large local recordings; small test fixtures belong in verification/fixtures
+/data/captures/*
+!/data/captures/.gitkeep
+
+# Uncurated benchmark output
+/benchmarks/results/raw/
