@@ -46,6 +46,6 @@ Only directory placeholders and housekeeping documentation exist so far. No RTL,
 
 ## Getting started
 
-Read [the architecture notes](docs/architecture.md), [development milestones](docs/roadmap.md), and [repository conventions](CONTRIBUTING.md). Confirm the exact Zybo Z7 variant and toolchain before creating board-specific projects.
+Read [the point and stream contract](docs/point-format.md), [architecture notes](docs/architecture.md), [development milestones](docs/roadmap.md), and [repository conventions](CONTRIBUTING.md). The board is a Zybo Z7-10; confirm the toolchain before creating board-specific projects.
 
 Generated build outputs belong in ignored `build/` directories. Keep large recordings outside Git; commit small fixtures and curated benchmark summaries when they are useful for reproducibility.
