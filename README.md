@@ -20,12 +20,17 @@ PL stages will use AXI4-Stream and a shared internal point format that preserves
 
 ## Repository layout
 
+PS software and PL hardware sources live in separate directories: `src/ps/`
+contains code executed by the Zynq ARM processor, while `src/pl/` contains RTL
+implemented in the FPGA fabric. Board integration files live in `fpga/`, and
+shared PS–PL interface specifications live in `docs/`.
+
 | Directory | Intended contents |
 | --- | --- |
-| `src/rtl/common/` | Shared SystemVerilog packages, stream utilities, and reusable blocks |
-| `src/rtl/point_filter/` | Configurable point-filter RTL |
-| `src/rtl/voxel_grid/` | Voxel-grid downsampling RTL |
-| `src/rtl/pipeline/` | PL stage composition and top-level RTL |
+| `src/pl/common/` | Shared SystemVerilog packages, stream utilities, and reusable blocks |
+| `src/pl/point_filter/` | Configurable point-filter RTL |
+| `src/pl/voxel_grid/` | Voxel-grid downsampling RTL |
+| `src/pl/pipeline/` | PL stage composition and top-level RTL |
 | `src/ps/` | Zynq PS software: Ethernet reception, DMA, configuration, and output transport |
 | `src/jetson/` | Jetson reception and downstream integration software |
 | `src/reference/` | Software golden reference for filtering and voxel processing |

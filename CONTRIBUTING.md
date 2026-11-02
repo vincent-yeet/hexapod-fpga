@@ -1,7 +1,7 @@
 # Repository conventions
 
-- Keep reusable RTL in `src/rtl/`; keep board constraints and Vivado setup in `fpga/`.
-- Keep Zynq PS, Jetson, and golden-reference software separate. Select languages, runtime environments, and dependencies when implementation begins.
+- Keep reusable RTL in `src/pl/`; keep board constraints and Vivado setup in `fpga/`.
+- Keep Zynq PS software in `src/ps/`, separate from PL hardware sources in `src/pl/`. Keep Jetson and golden-reference software in `src/jetson/` and `src/reference/`. Select languages, runtime environments, and dependencies when implementation begins.
 - Use AXI4-Stream boundaries between processing stages. Document the point format and stage contracts before implementing them.
 - Keep timestamps and sensor identity available through the pipeline. Record any intentional loss or aggregation of metadata.
 - Add module verification alongside each implemented stage, including stream backpressure and reset behavior.
