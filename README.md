@@ -1,4 +1,4 @@
-# hexapod-fpga
+# hexapod-fpga [WIP]
 
 Modular FPGA sensor preprocessing for a hexapod robot, using a Digilent Zybo Z7 (Zynq-7000), Livox Mid-360 LiDAR, and NVIDIA Jetson Orin Nano.
 
