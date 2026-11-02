@@ -35,7 +35,7 @@ logic keep_point;
 assign keep_point = point_valid &&
                     (x_pos >= x_min) && (x_pos <= x_max) &&
                     (y_pos >= y_min) && (y_pos <= y_max) &&
-                    (z_pos >= x_min) && (z_pos <= z_max);
+                    (z_pos >= z_min) && (z_pos <= z_max);
 
 // AXI logic
 // Output is buffered (register). Accept filtered input
@@ -45,7 +45,7 @@ always_ff @(posedge aclk) begin
     if (!areset_n) begin
         m_axis_tvalid <= 1'b0;
     end else if (s_axis_tready) begin
-        if (m_axis_tready && keep_point) begin
+        if (s_axis_tvalid && keep_point) begin
             m_axis_tdata <= s_axis_tdata;
             m_axis_tvalid <= 1'b1;
         end else begin
